@@ -1,5 +1,4 @@
 import java.security.SecureRandom;
-import java.util.Arrays;
 
 public class EstudandoJava{
     public static void main(String[] args) {
@@ -13,10 +12,18 @@ public class EstudandoJava{
                 numeros[l][c]=new SecureRandom().nextInt(100);
             }
         }
-
+        /* 
         for(int l=0;l<linhas;l++){
             for(int c=0;c<colunas;c++){
-                System.out.printf("%d | ",numeros[l][c]);
+                System.out.printf("%2d | ",numeros[l][c]);
+            }
+            System.out.printf("%n");
+        }
+        */
+
+        for(int[] n:numeros){
+            for(int v:n){
+                System.out.printf("%2d | ",v);
             }
             System.out.printf("%n");
         }
